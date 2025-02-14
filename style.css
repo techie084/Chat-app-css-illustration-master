@@ -45,7 +45,6 @@ body {
   font-weight: var(--Weights);
   font-style: normal;
   height: 100vh;
-  width: 100dvw;
 }
 
 .colored-bg-1 {
@@ -74,34 +73,51 @@ body {
   max-width: 800px;
 }
 
-.iphone-container {
-  width: 50rem;
-  height: 810px;
+.iphone-frame {
+  min-width: 375px;
+  min-height: 812px;
   background-color: var(--White);
-  border-radius: 20px;
-  border: 10px solid var(--White);
+  border-radius: 50px;
+  border: 13px solid var(--White);
+}
+
+.chat-header {
+  background: linear-gradient(90deg, var(--Light-Violet), var(--Light-Magenta));
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: space-between;
+  height: fit-content;
+  padding: 2rem 0.5rem 1rem 0.5rem;
+  border-radius: 3rem 3rem 0.5rem 0.5rem;
+  box-shadow: 1px 1px 5px var(--Grayish-Blue);
+  color: var(--White);
+}
+
+.center-icon {
+  width: 50%;
+  background-color: var(--White);
+  border-radius: 2rem 0 2rem 0;
 }
 
 .chat-body {
   padding: 1rem;
-  border-radius: 10px;
+  height: fit-content;
+  border-bottom-right-radius: 50px;
+  border-bottom-left-radius: 50px;
   background-color: var(--Light-Grayish-Violet);
 }
 
-.chat-header {
-  background: linear-gradient(
-    125deg,
-    var(--Light-Violet),
-    var(--Light-Magenta)
-  );
+.back-arrow {
+  width: 40px;
+  height: 40px;
   display: flex;
-  flex-direction: row;
   align-items: center;
-  justify-content: space-between;
-  height: fit-content;
-  padding: 2rem 0.5rem 1rem;
-  border-radius: 2rem 2rem 0.5rem 0.5rem;
-  box-shadow: 1px 1px 5px var(--Grayish-Blue);
+  justify-content: center;
+  border-radius: 100%;
+  padding: 0.5rem;
+  font-weight: 900;
+  font-size: 1rem;
   color: var(--White);
 }
 
@@ -114,33 +130,53 @@ body {
 }
 
 .dog-images {
-  width: 70px;
+  width: 60px;
   border-radius: 10px;
 }
 
-h4 {
+.header-txt {
   color: var(--White);
+}
+
+.small-txt {
+  font-size: 12px;
+}
+
+/* .texts{
+  
+} */
+
+.second-chat {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: left;
 }
 
 .three-dots {
   font-weight: 900;
-  /* color: var(--White); */
+  color: var(--White);
 }
 
 .normal-txt {
-  width: 250px;
+  margin: 10px 0 10px 0;
+  width: 210px;
   padding: 0.5rem;
-  color: var(--Dark-Grayish-Violet);
-  background-color: var();
+  color: var(--Moderate-Violet);
+  background-color: var(--Grayish-Blue);
+  border-radius: 15px 15px 15px 3px;
 }
 
 .gradient-txt {
   display: flex;
+  align-items: center;
   justify-content: space-between;
-  padding: 0.5rem;
+  padding: 0.7rem;
+  margin: 10px 0 10px 0;
+  border-radius: 15px 15px 15px 3px;
   width: 250px;
   color: var(--White);
-  background-color: linear-gradient(
+  background: linear-gradient(
     125deg,
     var(--Light-Magenta),
     var(--Light-Violet)
@@ -155,7 +191,7 @@ h4 {
 }
 
 .prices {
-  font-size: 1.5rem;
+  font-size: 1.3rem;
   font-weight: 600;
 }
 
@@ -163,7 +199,7 @@ h4 {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  width: 400px;
+  width: 100%;
   padding: 0.4rem 0.4rem 0.4rem 2rem;
   color: var(--Dark-Grayish-Violet);
   background-color: var(--White);

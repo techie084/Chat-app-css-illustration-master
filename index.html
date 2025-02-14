@@ -24,20 +24,20 @@
   <body>
     <div class="colored-bg-1"></div>
     <main class="container">
-      <div class="iphone-container">
+      <div class="iphone-frame">
         <div class="chat-header">
-          <div>
+          <div class="center-icon"></div>
+          <div class="user-info">
+            <p class="back-arrow"><</p>
             <img
               class="image-avatar"
               src="./images/avatar.jpg"
               alt="chat-header-image"
             />
-            <div>
-              <h4>Samuel Green</h4>
-              <p>Available to walk</p>
-            </div>
-            <div class="three-dots">:</div>
+            <h4 class="header-txt">Samuel Green</h4>
+            <p class="small-txt">Available to walk</p>
           </div>
+          <div class="three-dots">:</div>
         </div>
         <div class="chat-body">
           <div class="first-chat">
@@ -49,23 +49,25 @@
             </p>
           </div>
           <div class="second-chat">
-            <img
-              class="dog-images"
-              src="./images/dog-image-1.jpg"
-              alt="dog-image-1"
-            />
-            <img
-              class="dog-images"
-              src="./images/dog-image-2.jpg"
-              alt="dog-image-2"
-            />
-            <img
-              class="dog-images"
-              src="./images/dog-image-3.jpg"
-              alt="dog-image-3"
-            />
-            <p>Here are a few picture. She's a happy girl</p>
-            <p>Can you make it ?</p>
+            <div class="dogs-images">
+              <img
+                class="dog-images"
+                src="./images/dog-image-1.jpg"
+                alt="dog-image-1"
+              />
+              <img
+                class="dog-images"
+                src="./images/dog-image-2.jpg"
+                alt="dog-image-2"
+              />
+              <img
+                class="dog-images"
+                src="./images/dog-image-3.jpg"
+                alt="dog-image-3"
+              />
+            </div>
+            <p class="texts">Here are a few picture. She's a happy girl</p>
+            <p class="texts">Can you make it ?</p>
           </div>
           <div class="third-chat">
             <p class="normal-txt">
@@ -74,17 +76,15 @@
             </p>
             <!-- gradient-txt before chat -->
             <p class="gradient-txt">
-              <span class="circles"></span>
-              30 minute walk
+              <span class="circles"></span> 30 minute walk
               <span class="prices"> $29</span>
             </p>
             <p class="gradient-txt">
-              <span class="circles"></span>
-              1 hour walk
+              <span class="circles"></span> 1 hour walk
               <span class="prices">$49</span>
             </p>
           </div>
-          <!-- input at the bottom -->
+          <!-- input at the bottom of the iphone -->
           <div class="input-message">
             Type a message…
             <div class="send">></div>
@@ -101,8 +101,6 @@
           the chat.
         </p>
       </div>
-      <!-- todo: -->
-      <!-- being and entrepreneur means doing the known work for the unknown outcome  (80/20 rule) -->
     </main>
     <div class="colored-bg-2"></div>
     <!-- Samuel Green Available to Walk That sounds great. I’d be happy with that.
@@ -120,3 +118,6 @@
     </div> -->
   </body>
 </html>
+
+<!-- todo: -->
+<!-- being and entrepreneur means doing the known work for the unknown outcome  (80/20 rule) -->
