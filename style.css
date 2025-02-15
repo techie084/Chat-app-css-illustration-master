@@ -1,5 +1,7 @@
-/* --- */
-* {
+/* ---- */
+*,
+*::before,
+*::after {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -35,10 +37,10 @@
 
 /* General Styling */
 body {
-  display: flex;
-  flex-flow: row;
+  /* display: flex;
+  flex-direction: row;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-between; */
   background-color: var(--Grayish-Blue);
   font-family: "Rubik", serif;
   font-optical-sizing: auto;
@@ -75,90 +77,114 @@ body {
 
 .iphone-frame {
   min-width: 375px;
-  min-height: 812px;
+  height: auto;
   background-color: var(--White);
-  border-radius: 50px;
+  border-radius: 55px;
   border: 13px solid var(--White);
 }
 
+/* ---- gradient chat header inside iphone ---- */
 .chat-header {
   background: linear-gradient(90deg, var(--Light-Violet), var(--Light-Magenta));
   display: flex;
-  flex-flow: column;
+  flex-flow: column wrap;
   align-items: center;
-  justify-content: space-between;
-  height: fit-content;
-  padding: 2rem 0.5rem 1rem 0.5rem;
   border-radius: 3rem 3rem 0.5rem 0.5rem;
-  box-shadow: 1px 1px 5px var(--Grayish-Blue);
   color: var(--White);
 }
 
-.center-icon {
-  width: 50%;
+.center-header {
+  width: 200px;
+  height: 35px;
+  margin: 0 0 1rem 0;
   background-color: var(--White);
-  border-radius: 2rem 0 2rem 0;
+  border-radius: 0 0 20px 20px;
 }
 
-.chat-body {
-  padding: 1rem;
-  height: fit-content;
-  border-bottom-right-radius: 50px;
-  border-bottom-left-radius: 50px;
-  background-color: var(--Light-Grayish-Violet);
-}
-
-.back-arrow {
-  width: 40px;
-  height: 40px;
+.user-info {
+  margin: 0 0 1rem 0;
   display: flex;
   align-items: center;
   justify-content: center;
-  border-radius: 100%;
-  padding: 0.5rem;
-  font-weight: 900;
-  font-size: 1rem;
-  color: var(--White);
+  flex-flow: row wrap;
+  justify-content: space-between;
+  gap: 8px;
+}
+
+.back-arrow {
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  font-size: 1.3rem;
 }
 
 .image-avatar {
   border-radius: 100%;
-  border-color: 2px var(--White);
-  max-width: 40px;
-  max-height: 40px;
-  border: 3px solid var(--White);
-}
-
-.dog-images {
-  width: 60px;
-  border-radius: 10px;
+  width: 35px;
+  border: 2px solid var(--White);
 }
 
 .header-txt {
-  color: var(--White);
+  font-size: var(--Font-size);
+  margin-bottom: 5px;
 }
 
 .small-txt {
+  color: var(--Grayish-Blue);
   font-size: 12px;
 }
 
-/* .texts{
-  
-} */
+.three-dots {
+  margin-left: 7rem;
+  font-weight: 900;
+}
 
+/* --------- chat body --------- */
+.chat-body {
+  padding: 0.8rem;
+  border-radius: 0 0 50px 50px;
+  background-color: var(--Light-Grayish-Violet);
+}
+
+/* ---- Middle Chat ---- */
 .second-chat {
   display: flex;
-  flex-flow: column;
-  align-items: center;
+  flex-direction: column;
+  align-items: flex-end;
   justify-content: left;
+  text-align: left;
 }
 
-.three-dots {
-  font-weight: 900;
-  color: var(--White);
+.dog-image {
+  width: 70px;
+  border-radius: 10px;
 }
 
+.texts-1 {
+  font-size: 14px;
+  margin: 10px 0 10px 0;
+  width: 210px;
+  padding: 0.5rem;
+  color: var(--Desaturated-Dark-Violet);
+  background-color: var(--White);
+  border-radius: 15px 15px 3px 15px;
+}
+
+.texts-2 {
+  font-size: 14px;
+  margin: 5px 0 10px 0;
+  width: 150px;
+  padding: 0.5rem;
+  color: var(--Desaturated-Dark-Violet);
+  background-color: var(--White);
+  border-radius: 15px 15px 3px 15px;
+}
+
+/* ---- chat text on the right ---- */
 .normal-txt {
+  font-size: 14px;
   margin: 10px 0 10px 0;
   width: 210px;
   padding: 0.5rem;
@@ -168,10 +194,11 @@ body {
 }
 
 .gradient-txt {
+  font-size: 14px;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0.7rem;
+  padding: 0.7rem 1.5rem;
   margin: 10px 0 10px 0;
   border-radius: 15px 15px 15px 3px;
   width: 250px;
@@ -195,6 +222,7 @@ body {
   font-weight: 600;
 }
 
+/* ---- input box ---- */
 .input-message {
   display: flex;
   align-items: center;
@@ -221,6 +249,7 @@ body {
   background-color: var(--Very-Dark-Desaturated-Violet);
 }
 
+/* ---- main text container outside iphone frame ---- */
 .main-text-container {
   display: flex;
   flex-direction: column;
@@ -231,6 +260,7 @@ body {
 .main-heading {
   color: var(--Very-Dark-Desaturated-Violet);
   margin-bottom: 1rem;
+  font-size: 2.5rem;
 }
 
 .main-paragraph {
@@ -238,13 +268,42 @@ body {
   text-align: justify;
 }
 
-/* @media (min-width: 375px) {
+/* ---- animation for the fade in when pages loads ---- */
+/* .fade-in{
+
 } */
 
-/* .attribution {
-  font-size: 11px;
+@media screen and (max-width: 375px) {
+  body {
+    flex-direction: column;
+  }
+
+  .colored-bg-1 {
+    bottom: 0;
+    right: -50%;
+  }
+
+  .colored-bg-2 {
+    bottom: -50%;
+    right: 0;
+  }
+
+  .container {
+    width: 360px;
+    gap: 20px;
+    flex-direction: column;
+  }
+
+  .iphone-frame {
+    width: 20%;
+  }
+}
+
+.attribution {
+  font-size: 14px;
   text-align: center;
+  bottom: 1rem;
   a {
     color: hsl(228, 45%, 44%);
   }
-} */
+}
